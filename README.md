@@ -8,7 +8,7 @@ https://qiita.com/drafts/9e01d9aaaa733c96b5bf
 
 newrelicをインストールすると共に、Dockerのシングル構成を構築します
 volume optionを使用しないので、Docker内でのみアプリケーションが完結します
-
+```
  ─docker-tomcat
    │  .gitignore
    │  Dockerfile
@@ -16,7 +16,7 @@ volume optionを使用しないので、Docker内でのみアプリケーショ�
    │
    └─.ebextensions
            98newrelic.config
-
+```
 
 # case 2.
 ## This case is docker component with volume link option  on tomcat's webapps
@@ -28,7 +28,7 @@ webapps がvolumeでリンクされるので汎用的な利用が出来る代わ
 置き換わります
 
 サンプルとして、tomcatのdocsを一部参照できるようにされています
-
+```
  ─docker-tomcat-volume
      │  .gitignore
      │  Dockerfile
@@ -49,6 +49,7 @@ webapps がvolumeでリンクされるので汎用的な利用が出来る代わ
              │  
              └─WEB-INF
                      web.xml
+```
 
 # extract options
 1. newrelic
