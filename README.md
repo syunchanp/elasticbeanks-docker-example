@@ -7,7 +7,7 @@ https://qiita.com/drafts/9e01d9aaaa733c96b5bf
 ## This case is docker component on tomcat exclude webapps link
 
 - newrelicをインストールすると共に、Dockerのシングル構成を構築します
-- volume optionを使用しないので、Docker内でのみアプリケーションが完結します
+  - volume optionを使用しないので、Docker内でのみアプリケーションが完結します
 
 ```
  ─docker-tomcat
@@ -23,12 +23,11 @@ https://qiita.com/drafts/9e01d9aaaa733c96b5bf
 ## This case is docker component with volume link option  on tomcat's webapps
 
 - newrelicをインストールすると共に、Dockerのシングル構成を構築します
-- volume optionを使用してwar形式のアプリも併せてdeployする、Dockerコンポーネントです
-- webapps配下にwarファイルを置くことで、deployされます
--- volume optionを指定しているので、Docker内から参照しているのはホストOS側の
--- /var/app/current 配下に展開されたwebappsとなるので、Docker側のwebappsは消えます
-
-サンプルとして、tomcatのdocsを一部参照できるようにされています
+  - volume optionを使用してwar形式のアプリも併せてdeployする、Dockerコンポーネントです
+- webapps配下に任意のwarファイルを置くことで、deployされます
+  - volume optionを指定しているので、Docker内から参照しているのはホストOS側の
+  - /var/app/current 配下に展開されたwebappsとなるので、Docker側のwebappsは消えます
+- サンプルとして、tomcatのdocsを一部参照できるようにされています
 
 ```
  ─docker-tomcat-volume
