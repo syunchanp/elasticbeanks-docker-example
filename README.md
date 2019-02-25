@@ -9,13 +9,13 @@ https://qiita.com/drafts/9e01d9aaaa733c96b5bf
 newrelicをインストールすると共に、Dockerのシングル構成を構築します
 volume optionを使用しないので、Docker内でのみアプリケーションが完結します
 
-├─docker-tomcat
-│  │  .gitignore
-│  │  Dockerfile
-│  │  Dockerrun.aws.json
-│  │
-│  └─.ebextensions
-│          98newrelic.config
+ ─docker-tomcat
+   │  .gitignore
+   │  Dockerfile
+   │  Dockerrun.aws.json
+   │
+   └─.ebextensions
+           98newrelic.config
 
 
 # case 2.
@@ -29,26 +29,26 @@ webapps がvolumeでリンクされるので汎用的な利用が出来る代わ
 
 サンプルとして、tomcatのdocsを一部参照できるようにされています
 
-├─docker-tomcat-volume
-    │  .gitignore
-    │  Dockerfile
-    │  Dockerrun.aws.json
-    │  
-    ├─.ebextensions
-    │      98newrelic.config
-    │      
-    └─webapps
-        ├─docs
-        │  │  index.html
-        │  ├─WEB-INF
-        │  │      web.xml
-        │  └─websocketapi
-        │          index.html
-        │              
-        └─ROOT
-            │  
-            └─WEB-INF
-                    web.xml
+ ─docker-tomcat-volume
+     │  .gitignore
+     │  Dockerfile
+     │  Dockerrun.aws.json
+     │  
+     ├─.ebextensions
+     │      98newrelic.config
+     │      
+     └─webapps
+         ├─docs
+         │  │  index.html
+         │  ├─WEB-INF
+         │  │      web.xml
+         │  └─websocketapi
+         │          index.html
+         │              
+         └─ROOT
+             │  
+             └─WEB-INF
+                     web.xml
 
 # extract options
 1. newrelic
