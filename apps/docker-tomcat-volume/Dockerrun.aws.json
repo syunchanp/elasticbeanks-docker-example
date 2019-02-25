@@ -1,0 +1,16 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Logging": "/usr/local/tomcat/logs",
+  "Ports": [
+    {
+      "ContainerPort": 8080,
+      "HostPort": 8000
+    }
+  ],
+  "Volumes": [
+    {
+      "HostDirectory": "/var/app/current/webapps",
+      "ContainerDirectory": "/usr/local/tomcat/webapps"
+    }
+  ]
+}
